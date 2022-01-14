@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dayCovreterStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+    
+        var monListAm = ["መስከረም","ጥቅምት","ህዳር","ታህሳስ","ጥር","የካቲት","መጋቢት","ሚያዚያ","ግንቦት","ሰኔ","ሀምሌ","ነሐሴ","ፓጉሜ"];
+        var monListEn = ["January","Feburary","March","April","May","June","July","August","Septmeber","October","November","December"];
+        var dayAm = document.getElementById("day").value;
+        var monthAm = document.getElementById("month").value;
+        var yearAm = document.getElementById("year").value;
+    </script>   
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="menu">☰</li>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="./dayConverterApp.html">APPS</a></li>
+            <li><a href="../about/about.html">ABOUT</a></li>
+            <li><a href="../contact/contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div id="appSelector">
+
+    </div>
+    <div id="usage">
+
+    </div>
+
+    <div id="dayConv">
+        <form action="">
+            <label for="day">ቀን</label>
+
+            <select name="day" id="day">
+                <script type="text/javascript">                
+                    for(m = 1;m <= 30;m++)
+                    document.write("<option value=\"" + m + "\">" + m + "</option>");
+                </script>
+            </select>
+            <label for="monthAm">ወር</label>
+            <select name="month" id="monthAm">
+                <script type="text/javascript">
+                    for(i = 0;i <= 12;i++)
+                    document.write("<option value=\"" + monListAm[i] + "\">" + monListAm[i] + "</option>")
+                </script>
+            </select>
+            <label for="year">አመት</label>
+            <select name="year" id="year">
+                <script type="text/javascript">
+                    for(m = 2021;m >= 1900;m--)
+                    document.write("<option value=\"" + m + "\">" + m + "</option>");
+                </script>
+            </select>
+            <br />
+            <input type="submit" name="" class="button" value="ቀይር">
+        </form>
+        <form action="">
+            <label for="day">Day</label>
+
+            <select name="day" id="day">
+                <script type="text/javascript">                
+                    for(m = 1;m <= 30;m++)
+                    document.write("<option value=\"" + m + "\">" + m + "</option>");
+                </script>
+            </select>
+            <label for="month">Month</label>
+            <select name="month" id="month">
+                <script type="text/javascript">
+                    for(i = 0;i <= 12;i++)
+                    document.write("<option value=\"" + monListEn[i] + "\">" + monListEn[i] + "</option>")
+                </script>
+            </select>
+            <label for="year">Year</label>
+            <select name="year" id="year">
+                <script type="text/javascript">
+                    for(m = 2021;m >= 1900;m--)
+                    document.write("<option value=\"" + m + "\">" + m + "</option>");
+                </script>
+            </select>
+            <br />
+            <input type="submit" name="" class="button" value="Convert">
+        </form>
+    </div>
+    
+    
+</body>
+</html>
